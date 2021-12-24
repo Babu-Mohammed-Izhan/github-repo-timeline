@@ -24,7 +24,7 @@ interface Repo {
 const Card = ({ repo }: Repo) => {
   return (
     <div
-      className={` border border-gray-200 bg-white hover:bg-gray-50 border-b-2 hover:border-b-4 ${
+      className={` border border-gray-200 bg-white hover:bg-gray-50 border-b-2 hover:border-b-[3px] ${
         Colors.hasOwnProperty(repo.language)
           ? Colors[repo.language].border
           : "default"
