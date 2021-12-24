@@ -8,12 +8,11 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/">
-          <Startpage username={username} setUsername={setUsername} />
-        </Route>
-        <Route path="/main">
-          <Mainpage username={username} />
-        </Route>
+        <Route
+          path="/"
+          element={<Startpage username={username} setUsername={setUsername} />}
+        />
+        <Route path="main" element={<Mainpage username={username} />} />
       </Routes>
     </div>
   );
