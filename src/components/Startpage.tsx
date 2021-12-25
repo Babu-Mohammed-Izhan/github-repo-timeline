@@ -9,11 +9,9 @@ interface StartpageProps {
 const Startpage = ({ username, setUsername }: StartpageProps) => {
   return (
     <div className="flex items-center justify-center h-screen flex-col">
-      <div>
         <h1>GitHub Repo Timeline</h1>
         <input onChange={(e) => setUsername(e.target.value)} value={username} />
-        <Link to="/main">Mainpage</Link>
-      </div>
+      <Link to="/main">Mainpage</Link>
     </div>
   );
 };

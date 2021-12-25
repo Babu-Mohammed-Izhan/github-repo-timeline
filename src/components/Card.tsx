@@ -40,7 +40,7 @@ const Card = ({ repo, idx }: Repo) => {
         <div className="flex items-start justify-between flex-col h-full py-2">
           <p className="text-xs pb-1">{repo.created_at.split("T")[0]}</p>
           <a
-            className="text-blue-400 text-xl"
+            className="text-blue-400 text-2xl"
             href={`${repo.html_url}`}
             target="_blank"
             rel="noreferrer"

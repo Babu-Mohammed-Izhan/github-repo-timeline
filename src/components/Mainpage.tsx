@@ -10,7 +10,7 @@ interface MainpageProps {
 
 const Mainpage = ({ username }: MainpageProps) => {
   const [repos, setRepos] = useState([]);
-  const [color, setColor] = useState("");
+  const [color, setColor] = useState("#0E4429");
 
   const getData = async () => {
     const response = await axios.get(
