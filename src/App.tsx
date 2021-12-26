@@ -3,7 +3,6 @@ import { Route, Routes } from "react-router-dom";
 
 import Contributions from "./components/Contributions";
 import Repos from "./components/repos";
-import Mainpage from "./components/Mainpage";
 import Startpage from "./components/Startpage";
 
 function App() {
@@ -16,7 +15,6 @@ function App() {
           path="/"
           element={<Startpage username={username} setUsername={setUsername} />}
         />
-        <Route path="main" element={<Mainpage username={username} />} />
         <Route path="repo" element={<Repos username={username} />} />
         <Route path="contrib" element={<Contributions username={username} />} />
       </Routes>
