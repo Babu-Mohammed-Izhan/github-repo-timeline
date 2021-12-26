@@ -12,7 +12,9 @@ const Calender = ({ username, color }: CalProps) => {
   const [years, setYears] = useState<number[]>([]);
 
   function range(size: number, startAt: number = 0): Array<number> {
-    return [...Array(size).keys()].map((i) => i + startAt);
+    return [...Array(size).keys()]
+      .map((i) => i + startAt)
+      .sort((a, b) => b - a);
   }
 
   const getUserdata = async () => {
