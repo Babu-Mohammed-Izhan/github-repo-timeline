@@ -19,7 +19,9 @@ interface Props {
   username: string;
 }
 
-const Repos = ({ username }: Props) => {
+const Repos = ({
+  username = `${localStorage.getItem("Github-contrib-username")}`,
+}: Props) => {
   const [repos, setRepos] = useState<RepoType[]>([]);
 
   const getData = async (page: number) => {
@@ -39,6 +41,7 @@ const Repos = ({ username }: Props) => {
 
   return (
     <div className="flex items-center justify-center flex-col pt-10 w-11/12 md:w-4/5 m-auto text-center ">
+      <Link to="/">Home</Link>
       <h1 className="text-xl md:text-3xl mb-5">{username}</h1>
       <Link to="/contrib">Go to Contributions Graph</Link>
       <div className="my-3 md:my-10 w-full ">

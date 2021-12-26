@@ -8,7 +8,10 @@ interface CalProps {
   color: string;
 }
 
-const Calender = ({ username, color }: CalProps) => {
+const Calender = ({
+  username = `${localStorage.getItem("Github-contrib-username")}`,
+  color,
+}: CalProps) => {
   const [years, setYears] = useState<number[]>([]);
 
   function range(size: number, startAt: number = 0): Array<number> {
