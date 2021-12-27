@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { ThemeContext } from "../App";
 import axios from "axios";
 import GitHubCalendar from "react-github-calendar";
 import ReactTooltip from "react-tooltip";
@@ -12,6 +13,7 @@ const Calender = ({
   username = `${localStorage.getItem("Github-contrib-username")}`,
   color,
 }: CalProps) => {
+  const theme = useContext(ThemeContext);
   const [years, setYears] = useState<number[]>([]);
 
   function range(size: number, startAt: number = 0): Array<number> {

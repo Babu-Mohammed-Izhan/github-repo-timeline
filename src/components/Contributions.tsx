@@ -21,7 +21,7 @@ const Contributions = ({
         <Link to="/repo">
           <span className="dark:text-white">Go To Repos List</span>
         </Link>
-        <div className="my-3 md:my-10 w-full text-center bg-white dark:bg-gray-50 p-5 rounded">
+        <div className="my-3 md:my-10 w-full text-center p-5 rounded">
           <h2 className="md:text-3xl mb-5 ">Contributions</h2>
           <Calender username={username} color={color} />
           <div className="flex items-center justify-center">
