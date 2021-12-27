@@ -27,7 +27,7 @@ const Startpage = ({ username, setUsername }: StartpageProps) => {
               <p className="leading-normal text-base md:text-2xl mb-8 text-center md:text-left"></p>
             </div>
 
-            <form className="bg-white dark:bg-gray-900 w-full shadow-lg rounded-lg p-8 pt-6 pb-8 mb-4">
+            <form className="bg-gray-50 dark:bg-gray-900 w-full shadow-lg rounded-lg p-8 pt-6 pb-8 mb-4">
               <div className="mb-4">
                 <label
                   className="block text-blue-900 dark:text-blue-300 py-2 font-bold mb-2"

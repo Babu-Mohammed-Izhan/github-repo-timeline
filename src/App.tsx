@@ -63,14 +63,14 @@ function App() {
         <footer className="w-full h-full py-8 text-sm text-center md:text-left fade-in text-black dark:text-white bg-white dark:bg-gray-900">
           <div className="w-5/6 m-auto">
             <a
-              className="text-gray-500 dark:text-purple-300 no-underline hover:no-underline"
+              className="text-purple-700 dark:text-purple-300 no-underline hover:no-underline"
               href="/"
             >
               &copy; App 2021
             </a>
             - Created by
             <a
-              className="text-gray-500 dark:text-purple-300 no-underline hover:no-underline px-1"
+              className=" text-purple-700 dark:text-purple-300 no-underline hover:no-underline px-1"
               href="https://babumohammedizhan.netlify.app/"
             >
               Babu Mohammed Izhan
