@@ -40,16 +40,28 @@ const Repos = ({
   }, []);
 
   return (
-    <div className="flex items-center justify-center flex-col pt-10 w-11/12 md:w-4/5 m-auto text-center ">
-      <Link to="/">Home</Link>
-      <h1 className="text-xl md:text-3xl mb-5">{username}</h1>
-      <Link to="/contrib">Go to Contributions Graph</Link>
-      <div className="my-3 md:my-10 w-full ">
-        <h2 className="md:text-3xl mb-5 text-center">Repositories</h2>
-        {repos.length > 0 &&
-          repos.map((r: any, idx: number) => {
-            return <Card key={r.id} repo={r} idx={idx} />;
-          })}
+    <div className=" pt-10 text-center bg-white dark:bg-gray-900 ">
+      <div className="flex items-center justify-center flex-col w-11/12 md:w-4/5 m-auto ">
+        <Link to="/">
+          <a className="dark:text-white" href="/">
+            Home
+          </a>
+        </Link>
+        <h1 className="text-xl md:text-3xl mb-5 dark:text-white">{username}</h1>
+        <Link to="/contrib">
+          <a className="dark:text-white" href="/">
+            Go to Contributions Graph
+          </a>
+        </Link>
+        <div className="my-3 md:my-10 w-full ">
+          <h2 className="md:text-3xl mb-5 text-center dark:text-white">
+            Repositories
+          </h2>
+          {repos.length > 0 &&
+            repos.map((r: any, idx: number) => {
+              return <Card key={r.id} repo={r} idx={idx} />;
+            })}
+        </div>
       </div>
     </div>
   );
