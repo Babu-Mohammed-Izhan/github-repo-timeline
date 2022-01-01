@@ -23,6 +23,7 @@ const Repos = ({
   username = `${localStorage.getItem("Github-contrib-username")}`,
 }: Props) => {
   const [repos, setRepos] = useState<RepoType[]>([]);
+  console.log(localStorage.getItem("Github-contrib-username"));
 
   const getData = async (page: number) => {
     const response = await axios.get(

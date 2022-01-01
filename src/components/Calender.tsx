@@ -37,6 +37,16 @@ const Calender = ({
     getUserdata();
   }, []);
 
+  function getWidth() {
+    return Math.max(
+      document.body.scrollWidth,
+      document.documentElement.scrollWidth,
+      document.body.offsetWidth,
+      document.documentElement.offsetWidth,
+      document.documentElement.clientWidth
+    );
+  }
+
   return (
     <>
       {years.length &&
@@ -45,7 +55,7 @@ const Calender = ({
             <div className="my-6" key={y}>
               <GitHubCalendar
                 username={username}
-                blockSize={20}
+                blockSize={getWidth() < 400 ? 10 : 20}
                 color={color}
                 year={y}
               >
