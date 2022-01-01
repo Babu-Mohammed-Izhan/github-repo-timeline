@@ -17,18 +17,18 @@ function App() {
         <div className="w-full mx-auto bg-white dark:bg-[rgb(13,17,23)]  min-h-screen">
           <header className=" flex items-center justify-between px-20">
             <a
-              className="flex items-center text-indigo-400 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
+              className="flex items-center text-green-500 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
               href="/"
             >
               GitHub Repo
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-pink-500 to-purple-500">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-pink-500 to-purple-500 mx-3">
                 Timeline
               </span>
             </a>
 
             <div className="flex justify-end content-center">
               <a
-                className="inline-block text-blue-300 no-underline hover:text-pink-500 hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 transform hover:scale-125 duration-300 ease-in-out"
+                className="inline-block text-blue-300 no-underline  hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 transform hover:scale-125 duration-300 ease-in-out"
                 href="https://twitter.com/babu_izhan"
               >
                 <svg

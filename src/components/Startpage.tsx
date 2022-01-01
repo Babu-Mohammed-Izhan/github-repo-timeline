@@ -46,7 +46,7 @@ const Startpage = ({ username, setUsername }: StartpageProps) => {
 
               <div className="flex items-center justify-start pt-4">
                 <button
-                  className="bg-gradient-to-r from-purple-800 to-green-500 hover:from-pink-500 hover:to-green-500 text-white font-bold py-2 px-4 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out mr-4"
+                  className="bg-gradient-to-r from-purple-800 to-green-500 hover:from-purple-500 hover:to-green-500 text-white font-bold py-2 px-4 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out mr-4"
                   type="button"
                 >
                   <Link to="/repo" onClick={() => handleUsername()}>
@@ -54,7 +54,7 @@ const Startpage = ({ username, setUsername }: StartpageProps) => {
                   </Link>
                 </button>
                 <button
-                  className="bg-gradient-to-r from-purple-800 to-green-500 hover:from-pink-500 hover:to-green-500 text-white font-bold py-2 px-4 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out mr-4"
+                  className="bg-gradient-to-r from-purple-800 to-green-500 hover:from-purple-500 hover:to-green-500 text-white font-bold py-2 px-4 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out mr-4"
                   type="button"
                 >
                   <Link to="/contrib" onClick={() => handleUsername()}>
