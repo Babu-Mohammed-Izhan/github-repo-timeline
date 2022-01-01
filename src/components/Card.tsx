@@ -23,6 +23,10 @@ const Colors: any = {
     border: "border-b-indigo-600 dark:border-b-indigo-600",
     bg: "bg-indigo-600 dark:bg-indigo-600",
   },
+  "C#": {
+    border: "border-b-green-600 dark:border-b-green-600",
+    bg: "bg-green-600 dark:bg-green-600",
+  },
   default: {
     border: "border-b-grey-400 dark:border-b-grey-400",
     bg: "bg-grey-400 dark:bg-grey-400",

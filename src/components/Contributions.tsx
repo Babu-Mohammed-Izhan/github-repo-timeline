@@ -12,7 +12,7 @@ const Contributions = ({
   const [color, setColor] = useState("#1A9B45");
 
   return (
-    <div className=" bg-white dark:bg-gray-900">
+    <div className=" bg-white dark:bg-[rgb(13,17,23)] ">
       <div className="flex items-center justify-center flex-col pt-10 w-11/12 m-auto ">
         <Link to="/">
           <span className="dark:text-white">Home</span>

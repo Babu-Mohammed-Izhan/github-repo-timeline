@@ -41,7 +41,7 @@ const Repos = ({
   }, []);
 
   return (
-    <div className=" pt-10 text-center bg-white dark:bg-gray-900 ">
+    <div className=" pt-10 bg-white dark:bg-[rgb(13,17,23)] ">
       <div className="flex items-center justify-center flex-col w-11/12 md:w-4/5 m-auto ">
         <Link to="/">
           <a className="dark:text-white" href="/">

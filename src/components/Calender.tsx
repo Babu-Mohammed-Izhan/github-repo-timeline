@@ -13,7 +13,7 @@ const Calender = ({
   username = `${localStorage.getItem("Github-contrib-username")}`,
   color,
 }: CalProps) => {
-  const theme = useContext(ThemeContext);
+  const mode = useContext(ThemeContext);
   const [years, setYears] = useState<number[]>([]);
 
   function range(size: number, startAt: number = 0): Array<number> {
@@ -56,6 +56,17 @@ const Calender = ({
               <GitHubCalendar
                 username={username}
                 blockSize={getWidth() < 400 ? 10 : 20}
+                theme={
+                  mode === "dark"
+                    ? {
+                        level0: "#161B22",
+                        level1: "#0E4429",
+                        level2: "#006D32",
+                        level3: "#26A641",
+                        level4: "#39D353",
+                      }
+                    : undefined
+                }
                 color={color}
                 year={y}
               >
