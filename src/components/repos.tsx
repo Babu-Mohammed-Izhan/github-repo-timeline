@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Card from "./Card";
@@ -25,18 +26,17 @@ const Repos = ({
   const [repos, setRepos] = useState<RepoType[]>([]);
   console.log(localStorage.getItem("Github-contrib-username"));
 
-  const getData = async (page: number) => {
-    const response = await axios.get(
-      `https://api.github.com/users/${username}/repos?sort=updated&per_page=100&page=${page}`
-    );
-    if (response.data.length === 100) {
-      getData(page + 1);
-    }
-    setRepos([...repos, ...response.data]);
-    console.log(response.data);
-  };
-
   useEffect(() => {
+    const getData = async (page: number) => {
+      const response = await axios.get(
+        `https://api.github.com/users/${username}/repos?sort=updated&per_page=100&page=${page}`
+      );
+      if (response.data.length === 100) {
+        getData(page + 1);
+      }
+      setRepos([...repos, ...response.data]);
+      console.log(response.data);
+    };
     getData(1);
   }, []);
 
