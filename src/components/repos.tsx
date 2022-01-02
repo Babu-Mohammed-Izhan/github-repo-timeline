@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Card from "./Card";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 export interface RepoType {
   repos: {
@@ -16,20 +16,15 @@ export interface RepoType {
   username: string;
 }
 
-interface Props {
-  username: string;
-}
-
-const Repos = ({
-  username = `${localStorage.getItem("Github-contrib-username")}`,
-}: Props) => {
+const Repos = () => {
   const [repos, setRepos] = useState<RepoType[]>([]);
-  console.log(localStorage.getItem("Github-contrib-username"));
+
+  let params = useParams();
 
   useEffect(() => {
     const getData = async (page: number) => {
       const response = await axios.get(
-        `https://api.github.com/users/${username}/repos?sort=updated&per_page=100&page=${page}`
+        `https://api.github.com/users/${params.username}/repos?sort=updated&per_page=100&page=${page}`
       );
       if (response.data.length === 100) {
         getData(page + 1);
@@ -48,11 +43,11 @@ const Repos = ({
             Home
           </a>
         </Link>
-        <h1 className="text-xl md:text-3xl mb-5 dark:text-white">{username}</h1>
-        <Link to="/contrib">
-          <a className="dark:text-white" href="/">
-            Go to Contributions Graph
-          </a>
+        <h1 className="text-xl md:text-3xl mb-5 dark:text-white">
+          {params.username}
+        </h1>
+        <Link to={`/${params.username}/repo`}>
+          <p className="dark:text-purple-100">Go to Contributions Graph</p>
         </Link>
         <div className="my-3 md:my-10 w-full ">
           <h2 className="md:text-3xl mb-5 text-center dark:text-white">

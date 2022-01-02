@@ -1,15 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-interface StartpageProps {
-  username: string;
-  setUsername: React.Dispatch<React.SetStateAction<string>>;
-}
-
-const Startpage = ({ username, setUsername }: StartpageProps) => {
-  const handleUsername = () => {
-    localStorage.setItem("Github-contrib-username", username);
-  };
+const Startpage = () => {
+  const [username, setUsername] = useState("");
 
   return (
     <body className="leading-normal tracking-normal text-indigo-400 bg-cover bg-fixed bg-white dark:bg-[rgb(13,17,23)]  h-full">
@@ -49,17 +42,13 @@ const Startpage = ({ username, setUsername }: StartpageProps) => {
                   className="bg-gradient-to-r from-purple-800 to-green-500 hover:from-purple-500 hover:to-green-500 text-white font-bold py-2 px-4 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out mr-4"
                   type="button"
                 >
-                  <Link to="/repo" onClick={() => handleUsername()}>
-                    Repos
-                  </Link>
+                  <Link to={`/${username}/repo`}>Repos</Link>
                 </button>
                 <button
                   className="bg-gradient-to-r from-purple-800 to-green-500 hover:from-purple-500 hover:to-green-500 text-white font-bold py-2 px-4 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out mr-4"
                   type="button"
                 >
-                  <Link to="/contrib" onClick={() => handleUsername()}>
-                    Contributions
-                  </Link>
+                  <Link to={`/${username}/contrib`}>Contributions</Link>
                 </button>
               </div>
             </form>

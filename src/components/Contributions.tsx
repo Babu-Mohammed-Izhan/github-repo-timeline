@@ -1,15 +1,11 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Calender from "./Calender";
 
-interface Contrib {
-  username: string;
-}
-
-const Contributions = ({
-  username = `${localStorage.getItem("Github-contrib-username")}`,
-}: Contrib) => {
+const Contributions = () => {
   const [color, setColor] = useState("#1A9B45");
+
+  let params = useParams();
 
   return (
     <div className=" bg-white dark:bg-[rgb(13,17,23)] ">
@@ -17,13 +13,18 @@ const Contributions = ({
         <Link to="/">
           <span className="dark:text-white">Home</span>
         </Link>
-        <h1 className="text-xl md:text-3xl mb-5 dark:text-white">{username}</h1>
-        <Link to="/repo">
-          <span className="dark:text-white">Go To Repos List</span>
+        <h1 className="text-xl md:text-3xl mb-5 dark:text-white">
+          {params.username}
+        </h1>
+        <Link to={`/${params.username}/repo`}>
+          <span className="dark:text-purple-100">Go To Repos List</span>
         </Link>
         <div className="my-3 md:my-10 w-full text-center p-5 rounded dark:text-white">
           <h2 className="md:text-3xl mb-5 ">Contributions</h2>
-          <Calender username={username} color={color} />
+          <Calender
+            username={params.username ? params.username : ""}
+            color={color}
+          />
           <div className="flex items-center justify-center">
             <label htmlFor="color" className="mx-3 pb-[5px]">
               Color:

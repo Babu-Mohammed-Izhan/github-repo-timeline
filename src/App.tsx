@@ -8,7 +8,6 @@ import Startpage from "./components/Startpage";
 export const ThemeContext = createContext({});
 
 function App() {
-  const [username, setUsername] = useState("");
   const [mode, setMode] = useState("dark");
 
   return (
@@ -81,17 +80,9 @@ function App() {
           </header>
 
           <Routes>
-            <Route
-              path="/"
-              element={
-                <Startpage username={username} setUsername={setUsername} />
-              }
-            />
-            <Route path="repo" element={<Repos username={username} />} />
-            <Route
-              path="contrib"
-              element={<Contributions username={username} />}
-            />
+            <Route path="/" element={<Startpage />} />
+            <Route path="/:username/repo" element={<Repos />} />
+            <Route path="/:username/contrib" element={<Contributions />} />
           </Routes>
           <footer className="w-full h-full py-8 text-sm text-center md:text-left fade-in text-black dark:text-white bg-white dark:bg-[rgb(13,17,23)] ">
             <div className="w-5/6 m-auto">
