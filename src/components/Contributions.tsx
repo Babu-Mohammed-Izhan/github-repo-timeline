@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import Calender from "./Calender";
+import { ThemeContext } from "../App";
 
 const Contributions = () => {
   const [color, setColor] = useState("#1A9B45");
+
+  const mode = useContext(ThemeContext);
 
   let params = useParams();
 
@@ -25,19 +28,23 @@ const Contributions = () => {
             username={params.username ? params.username : ""}
             color={color}
           />
-          <div className="flex items-center justify-center">
-            <label htmlFor="color" className="mx-3 pb-[5px]">
-              Color:
-            </label>
-            <input
-              className="cursor-pointer"
-              type="color"
-              name="color"
-              id="color"
-              value={color}
-              onChange={(e) => setColor(e.target.value)}
-            />
-          </div>
+          {mode === "dark" ? (
+            ""
+          ) : (
+            <div className="flex items-center justify-center">
+              <label htmlFor="color" className="mx-3 pb-[5px]">
+                Color:
+              </label>
+              <input
+                className="cursor-pointer"
+                type="color"
+                name="color"
+                id="color"
+                value={color}
+                onChange={(e) => setColor(e.target.value)}
+              />
+            </div>
+          )}
         </div>
       </div>
     </div>

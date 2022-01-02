@@ -46,10 +46,10 @@ const Repos = () => {
         <h1 className="text-xl md:text-3xl mb-5 dark:text-white">
           {params.username}
         </h1>
-        <Link to={`/${params.username}/repo`}>
+        <Link to={`/${params.username}/contrib`}>
           <p className="dark:text-purple-100">Go to Contributions Graph</p>
         </Link>
-        <div className="my-3 md:my-10 w-full ">
+        <div className="my-3 md:my-10 w-full min-h-[90vh]">
           <h2 className="md:text-3xl mb-5 text-center dark:text-white">
             Repositories
           </h2>
