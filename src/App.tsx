@@ -19,10 +19,7 @@ function App() {
               className="flex items-center text-green-500 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
               href="/"
             >
-              GitHub Repo
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-pink-500 to-purple-500 mx-3">
-                Timeline
-              </span>
+              GitHub Repo Timeline
             </a>
 
             <div className="flex justify-end content-center">

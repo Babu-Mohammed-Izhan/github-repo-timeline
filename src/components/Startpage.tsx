@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Startpage = () => {
-  const [username, setUsername] = useState("");
+  const [username, setUsername] = useState('');
 
   return (
     <body className="leading-normal tracking-normal text-indigo-400 bg-cover bg-fixed bg-white dark:bg-[rgb(13,17,23)]  h-full">
@@ -39,13 +39,13 @@ const Startpage = () => {
 
               <div className="flex items-center justify-start pt-4">
                 <button
-                  className="bg-gradient-to-r from-purple-800 to-green-500 hover:from-purple-500 hover:to-green-500 text-white font-bold py-2 px-4 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out mr-4"
+                  className="bg-gradient-to-r from-purple-800 to-purple-500 hover:from-purple-500 hover:to-purple-300 text-white font-bold py-2 px-4 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out mr-4"
                   type="button"
                 >
                   <Link to={`/${username}/repo`}>Repos</Link>
                 </button>
                 <button
-                  className="bg-gradient-to-r from-purple-800 to-green-500 hover:from-purple-500 hover:to-green-500 text-white font-bold py-2 px-4 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out mr-4"
+                  className="bg-gradient-to-r from-purple-800 to-purple-500 hover:from-purple-500 hover:to-purple-300 text-white font-bold py-2 px-4 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out mr-4"
                   type="button"
                 >
                   <Link to={`/${username}/contrib`}>Contributions</Link>
