@@ -1,20 +1,20 @@
-import React, { useState, createContext } from "react";
-import { Route, Routes } from "react-router-dom";
+import React, { useState, createContext } from 'react';
+import { Route, Routes } from 'react-router-dom';
 
-import Contributions from "./components/Contributions";
-import Repos from "./components/repos";
-import Startpage from "./components/Startpage";
+import Contributions from './components/Contributions';
+import Repos from './components/repos';
+import Startpage from './components/Startpage';
 
 export const ThemeContext = createContext({});
 
 function App() {
-  const [mode, setMode] = useState("dark");
+  const [mode, setMode] = useState('dark');
 
   return (
     <ThemeContext.Provider value={mode}>
       <div className={` ${mode} min-h-full w-full  `}>
         <div className="w-full mx-auto bg-white dark:bg-[rgb(13,17,23)]  min-h-screen">
-          <header className=" flex items-center justify-between px-20">
+          <header className=" flex items-center justify-between px-5 md:px-20">
             <a
               className="flex items-center text-green-500 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
               href="/"
@@ -38,10 +38,10 @@ function App() {
               <button
                 className="text-black dark:text-white"
                 onClick={() => {
-                  mode === "dark" ? setMode("light") : setMode("dark");
+                  mode === 'dark' ? setMode('light') : setMode('dark');
                 }}
               >
-                {mode === "dark" ? (
+                {mode === 'dark' ? (
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6"

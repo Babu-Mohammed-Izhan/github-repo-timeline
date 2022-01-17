@@ -12,7 +12,7 @@ const Startpage = () => {
             <div className="p-8">
               <h1 className="my-4 text-3xl md:text-5xl dark:text-white text-black font-bold leading-tight text-center md:text-left">
                 All your
-                <span className="px-2 bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-pink-500 to-purple-500">
+                <span className="px-2 bg-clip-text text-transparent bg-green-500">
                   GitHub
                 </span>
                 stats at on position.
