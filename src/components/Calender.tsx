@@ -1,19 +1,23 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useEffect, useState, useContext } from "react";
-import { ThemeContext } from "../App";
-import axios from "axios";
-import GitHubCalendar from "react-github-calendar";
-import ReactTooltip from "react-tooltip";
+import { useEffect, useState, useContext } from 'react';
+import { ThemeContext } from '../App';
+import axios from 'axios';
+import GitHubCalendar from 'react-github-calendar';
+import ReactTooltip from 'react-tooltip';
 
 interface CalProps {
   username: string;
   color: string;
+  theme: {
+    level0: string;
+    level1: string;
+    level2: string;
+    level3: string;
+    level4: string;
+  };
 }
 
-const Calender = ({
-  username = `${localStorage.getItem("Github-contrib-username")}`,
-  color,
-}: CalProps) => {
+const Calender = ({ username, color, theme }: CalProps) => {
   const mode = useContext(ThemeContext);
   const [years, setYears] = useState<number[]>([]);
 
@@ -28,7 +32,7 @@ const Calender = ({
       `https://api.github.com/users/${username}`
     );
 
-    const createdDate: number = Number(response.data.created_at.split("-")[0]);
+    const createdDate: number = Number(response.data.created_at.split('-')[0]);
     const currentDate: number = new Date().getFullYear();
     const difference: number = currentDate - createdDate;
     setYears(range(difference + 1, createdDate));
@@ -57,17 +61,7 @@ const Calender = ({
               <GitHubCalendar
                 username={username}
                 blockSize={getWidth() < 400 ? 10 : 20}
-                theme={
-                  mode === "dark"
-                    ? {
-                        level0: "#161B22",
-                        level1: "#0E4429",
-                        level2: "#006D32",
-                        level3: "#26A641",
-                        level4: "#39D353",
-                      }
-                    : undefined
-                }
+                theme={mode === 'dark' ? theme : undefined}
                 color={color}
                 year={y}
               >

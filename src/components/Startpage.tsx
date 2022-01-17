@@ -10,7 +10,7 @@ const Startpage = () => {
         <div className="container py-10 md:py-20 mx-auto flex flex-wrap flex-col md:flex-row items-center ">
           <div className="flex flex-col w-full lg:w-4/5 justify-center lg:items-start overflow-y-hidden">
             <div className="p-8">
-              <h1 className="my-4 text-3xl md:text-5xl dark:text-white text-black font-bold leading-tight text-center md:text-left">
+              <h1 className="my-4 text-xl sm:text-3xl md:text-5xl dark:text-white text-black font-bold leading-tight text-center md:text-left">
                 All your
                 <span className="px-2 bg-clip-text text-transparent bg-green-500">
                   GitHub

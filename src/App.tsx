@@ -16,10 +16,10 @@ function App() {
         <div className="w-full mx-auto bg-white dark:bg-[rgb(13,17,23)]  min-h-screen">
           <header className=" flex items-center justify-between px-5 md:px-20">
             <a
-              className="flex items-center text-green-500 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
+              className="flex items-center text-green-500 no-underline hover:no-underline font-bold text-xl md:text-2xl lg:text-4xl "
               href="/"
             >
-              GitHub Repo Timeline
+              GitHub Stats
             </a>
 
             <div className="flex justify-end content-center">
@@ -36,7 +36,7 @@ function App() {
                 </svg>
               </a>
               <button
-                className="text-black dark:text-white"
+                className="text-black dark:text-white mx-5"
                 onClick={() => {
                   mode === 'dark' ? setMode('light') : setMode('dark');
                 }}
