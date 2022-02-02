@@ -39,13 +39,13 @@ const Contributions = () => {
 
           <div className="flex items-center justify-center">
             {mode === 'dark' ? (
-              <>
+              <div className="flex flex-col md:flex-row justify-center">
                 <label htmlFor="color" className="mx-3 pb-[5px]">
                   Theme:
                 </label>
-                <div>
+                <div className="flex md:flex-row flex-col">
                   <button
-                    className="bg-gradient-to-r from-green-800 to-green-500 hover:from-green-500 hover:to-green-300 text-white font-bold py-2 px-4 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out mr-4"
+                    className="bg-gradient-to-r from-green-800 to-green-500 hover:from-green-500 hover:to-green-300 text-white font-bold py-2 px-4 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out mb-4 md:mr-4 text-xs md:text-base"
                     onClick={() =>
                       setTheme({
                         level0: '#161B22',
@@ -59,7 +59,7 @@ const Contributions = () => {
                     Github
                   </button>
                   <button
-                    className="bg-gradient-to-r from-orange-800 to-orange-500 hover:from-orange-500 hover:to-orange-300 text-white font-bold py-2 px-4 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out mr-4"
+                    className="bg-gradient-to-r from-orange-800 to-orange-500 hover:from-orange-500 hover:to-orange-300 text-white font-bold py-2 px-4 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out mb-4 md:mr-4 text-xs md:text-base"
                     onClick={() =>
                       setTheme({
                         level0: '#161B22',
@@ -73,7 +73,7 @@ const Contributions = () => {
                     Halloween
                   </button>
                   <button
-                    className="bg-gradient-to-r from-red-800 to-red-500 hover:from-red-500 hover:to-red-300 text-white font-bold py-2 px-4 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out mr-4"
+                    className="bg-gradient-to-r from-red-800 to-red-500 hover:from-red-500 hover:to-red-300 text-white font-bold py-2 px-4 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out mb-4 md:mr-4 text-xs md:text-base"
                     onClick={() =>
                       setTheme({
                         level0: '#161B22',
@@ -87,7 +87,7 @@ const Contributions = () => {
                     Christmas
                   </button>
                 </div>
-              </>
+              </div>
             ) : (
               <>
                 <label htmlFor="color" className="mx-3 pb-[5px]">

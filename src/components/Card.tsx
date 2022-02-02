@@ -58,7 +58,7 @@ const Card = ({ repo, idx, repolen }: Repo) => {
           Colors.hasOwnProperty(repo.language)
             ? Colors[repo.language].border
             : 'default'
-        } active:bg-gray-100 rounded-md p-3 my-3 cursor-pointer w-full  min-h-[180px] mx-auto`}
+        } active:bg-gray-100 rounded-md p-3 my-3 cursor-pointer w-full h-full min-h-[180px] mx-auto`}
         onClick={() => window.location.assign(repo.html_url)}
       >
         <div className="flex items-start justify-between flex-col h-full py-2">

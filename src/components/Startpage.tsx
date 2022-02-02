@@ -21,34 +21,37 @@ const Startpage = () => {
             </div>
 
             <form className="bg-gray-50 dark:bg-[rgb(13,17,23)] w-full shadow-lg rounded-lg p-8 pt-6 pb-8 mb-4">
-              <div className="mb-4">
-                <label
-                  className="block text-blue-900 dark:text-blue-300 py-2 font-bold mb-2"
-                  htmlFor="username"
-                >
-                  Enter you GitHib username.
-                </label>
-                <input
-                  type="text"
-                  id="username"
-                  className="shadow appearance-none border rounded w-full p-3 text-gray-700 leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
-                  onChange={(e) => setUsername(e.target.value)}
-                  value={username}
-                />
-              </div>
-
+              <label
+                className="block text-blue-900 dark:text-blue-300 py-2 font-bold mb-2"
+                htmlFor="username"
+              >
+                Enter you GitHib username.
+              </label>
+              <input
+                type="text"
+                id="username"
+                className="shadow appearance-none border rounded w-full p-3 text-gray-700 leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
+                onChange={(e) => setUsername(e.target.value)}
+                value={username}
+                required
+              />
+              <h2 className="text-white mt-2">Ex. Babu-Mohammed-Izhan</h2>
               <div className="flex items-center justify-start pt-4">
                 <button
                   className="bg-gradient-to-r from-purple-800 to-purple-500 hover:from-purple-500 hover:to-purple-300 text-white font-bold py-2 px-4 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out mr-4"
-                  type="button"
+                  type="submit"
                 >
-                  <Link to={`/${username}/repo`}>Repos</Link>
+                  <Link to={`/${username === '' ? username : ''}/repo`}>
+                    Repos
+                  </Link>
                 </button>
                 <button
                   className="bg-gradient-to-r from-purple-800 to-purple-500 hover:from-purple-500 hover:to-purple-300 text-white font-bold py-2 px-4 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out mr-4"
-                  type="button"
+                  type="submit"
                 >
-                  <Link to={`/${username}/contrib`}>Contributions</Link>
+                  <Link to={`/${username === '' ? username : ''}/contrib`}>
+                    Contributions
+                  </Link>
                 </button>
               </div>
             </form>
