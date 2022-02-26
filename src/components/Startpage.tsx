@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Startpage = () => {
   const [username, setUsername] = useState('');
+  console.log(username);
 
   return (
     <body className="leading-normal tracking-normal text-indigo-400 bg-cover bg-fixed bg-white dark:bg-[rgb(13,17,23)]  h-full">
@@ -41,7 +42,7 @@ const Startpage = () => {
                   className="bg-gradient-to-r from-purple-800 to-purple-500 hover:from-purple-500 hover:to-purple-300 text-white font-bold py-2 px-4 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out mr-4"
                   type="submit"
                 >
-                  <Link to={`/${username === '' ? username : ''}/repo`}>
+                  <Link to={`/${username === '' ? '' : username}/repo`}>
                     Repos
                   </Link>
                 </button>
@@ -49,7 +50,7 @@ const Startpage = () => {
                   className="bg-gradient-to-r from-purple-800 to-purple-500 hover:from-purple-500 hover:to-purple-300 text-white font-bold py-2 px-4 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out mr-4"
                   type="submit"
                 >
-                  <Link to={`/${username === '' ? username : ''}/contrib`}>
+                  <Link to={`/${username === '' ? '' : username}/contrib`}>
                     Contributions
                   </Link>
                 </button>
